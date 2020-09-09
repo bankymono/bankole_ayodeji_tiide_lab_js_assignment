@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Airtime-self
+        // 2. Airtime-Others
+        // 3. Data
+        // 4. Transfer
+
+        userValue=Number(prompt("Enter your choice:\n\n1."+ 
+        "Airtime-self\n2. Airtime-Others\n3. Data\n4. Transfer"));
+
+        if(Number.isNaN(userValue)){ // Checking if a number was entered
+            alert('Invalid input!')
+        }else{
+            if( userValue == 1 ){
+                userValue=Number(prompt("Enter amount to recharge without comma or any other special characters."))
+                if(Number.isNaN(userValue)){ // Checking if a number was entered
+                   alert('Invalid input!')
+                }else{
+                    verify = confirm(`Are you sure you want to recharge N${userValue} \n` +
+                    `worth of airtime on your phone?`)
+                    if(verify === true){
+                        alert(`Successfully recharged N${userValue} !`)
+                    }else{
+                        alert('click Ok to close !')
+                    }
+                }
+            }
+            else if(userValue==2){
+                userValue = Number(prompt("Enter network\n 1. MTN \n 2. AIRTEL \n 3. GLO \n 4. ETISALAT"))
+
+                if(Number.isNaN(userValue)){ // Checking if a number was entered
+                   alert('Invalid input!')
+                }else{
+                    userValue2 = Number(prompt("Enter phone number "))
+                    if(Number.isNaN(userValue2)){ // Checking if a number was entered
+                        alert('Invalid input!')
+                    }else{
+                        userValue3 = Number(prompt("Enter amount "))
+                    
+                        if(Number.isNaN(userValue3)){ // Checking if a number was entered
+                            alert('Invalid input!')
+                        }else{
+                            verify = confirm(`Are you sure you want to recharge ${userValue2} with `+
+                                `N${userValue3}?`)
+                            if(verify === true){
+                                alert(`Successfully recharged ${userValue2} with N${userValue3} !`)
+                            }else{
+                                alert('click Ok to close !')
+                            }
+                        }
+                    }
+                }
+            }    
+            else if(userValue ==3){
+                userValue = Number(prompt("Enter your value \n 1. 200 Megabyte \n 2. 1 Gigabyte \n 3. 10 Gigabyte \n 4. 30 Gigabyte"))
+                if(Number.isNaN(userValue3)){ // Checking if a number was entered
+                            alert('Invalid input!')
+                }else{
+                    if(userValue == 1){
+                        alert('200 Megabyte successfully activated')
+                    }
+                    else if(userValue ==2){
+                        alert('1 Gigabyte successfully activated')
+                    }
+                    else if(userValue ==3){
+                        alert('10 Gigabyte successfully activated')
+                    }
+                    else if(userValue ==4){
+                        alert('40 Gigabyte successfully activated')
+                    }
+                }
+            }
+            else if(userValue==4){
+                userValue = Number(prompt("Enter amount to transfer"))
+                if(Number.isNaN(userValue)){ // Checking if a number was entered
+                        alert('Invalid input!')
+                }else{
+                    phnum = prompt("Enter number to tranfer to")
+
+                    if(Number.isNaN(userValue)){ // Checking if a number was entered
+                        alert('Invalid input!')
+                    }else{
+
+                        verify = confirm(`You want to transfer N${userValue} to ${phnum}?`)
+                            if(verify === true){
+                                alert(`Successfully transferred ${userValue} to ${phnum} !`)
+                            }else{
+                                alert('click Ok to close !')
+                            }
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
